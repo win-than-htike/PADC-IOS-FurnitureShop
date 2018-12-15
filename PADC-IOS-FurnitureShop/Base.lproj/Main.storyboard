@@ -288,7 +288,7 @@
                         <viewLayoutGuide key="safeArea" id="KuH-EU-fTZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="VzW-l9-8vt">
-                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="pT2-OZ-saZ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="ic_back" style="plain" id="pT2-OZ-saZ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="goBack:" destination="Yam-s4-qBY" id="yZg-BC-ZOE"/>
@@ -303,17 +303,17 @@
             </objects>
             <point key="canvasLocation" x="1823.2" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="QNF-mt-aqA">
             <objects>
-                <viewController id="nTF-ls-b8f" sceneMemberID="viewController">
+                <viewController id="nTF-ls-b8f" customClass="ProfileViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CN8-qh-Bud">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mEW-Ld-z2c"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DeU-nT-rr8"/>
+                    <navigationItem key="navigationItem" title="Profile" id="DeU-nT-rr8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fm-r5-3kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,30 +322,30 @@
         <!--Listing-->
         <scene sceneID="tDf-5e-cI5">
             <objects>
-                <viewController title="Listing" id="vPd-6H-IkQ" customClass="LandingViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Listing" id="vPd-6H-IkQ" customClass="HomeViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahi-X0-gxZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0sM-1G-MFX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Listing" largeTitleDisplayMode="always" id="3G9-hx-Z83"/>
+                    <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="3G9-hx-Z83"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Si-6a-Tqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1334" y="1682"/>
         </scene>
-        <!--View Controller-->
+        <!--Stores-->
         <scene sceneID="Kmg-UB-ZVP">
             <objects>
-                <viewController id="nm0-QY-gGA" sceneMemberID="viewController">
+                <viewController id="nm0-QY-gGA" customClass="StoresListingViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nxq-Ou-sOb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SzK-1z-zCY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RBd-bd-inU"/>
+                    <navigationItem key="navigationItem" title="Stores" id="RBd-bd-inU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArH-3U-C7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,6 +359,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="UUg-uB-Rx1" kind="relationship" relationship="viewControllers" id="5lC-rN-swI"/>
@@ -393,7 +394,7 @@
         <scene sceneID="5Tr-jK-HGw">
             <objects>
                 <navigationController storyboardIdentifier="LandingViewController" automaticallyAdjustsScrollViewInsets="NO" id="UUg-uB-Rx1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="qhw-nZ-FkN"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="ic_home" id="qhw-nZ-FkN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MOy-Yj-Cp3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -408,17 +409,17 @@
             </objects>
             <point key="canvasLocation" x="-2294" y="1682"/>
         </scene>
-        <!--View Controller-->
+        <!--Bookmarks-->
         <scene sceneID="6IG-Tj-RJn">
             <objects>
-                <viewController id="Ked-3M-fvY" sceneMemberID="viewController">
+                <viewController id="Ked-3M-fvY" customClass="BookmarksViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wa2-Iy-1J0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YS3-wz-TOQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="83T-ck-xhh"/>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="83T-ck-xhh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oT-w2-3fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -428,7 +429,7 @@
         <scene sceneID="eM2-Nx-MZC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lge-7n-6Uo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Djf-Vy-PuR"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="ic_profile" id="Djf-Vy-PuR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jl3-k5-vw3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -447,7 +448,7 @@
         <scene sceneID="eoi-Y6-U4L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oqO-Uk-JVW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ybl-Sv-lh9"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="ic_stores_listing" id="Ybl-Sv-lh9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O0C-ha-xAz">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -466,7 +467,7 @@
         <scene sceneID="x4x-Ce-79Y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ksx-cb-17V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DJG-di-9J2"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="ic_bookmark" id="DJG-di-9J2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0gB-kh-1Mv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -484,6 +485,11 @@
     </scenes>
     <resources>
         <image name="bg_entry" width="2956" height="5746"/>
+        <image name="ic_back" width="24" height="24"/>
+        <image name="ic_bookmark" width="24" height="24"/>
+        <image name="ic_home" width="26" height="26"/>
+        <image name="ic_profile" width="26" height="26"/>
         <image name="ic_profile_placeholder" width="75" height="75"/>
+        <image name="ic_stores_listing" width="24" height="24"/>
     </resources>
 </document>
