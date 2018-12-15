@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LandingViewController: UITabBarController {
+class LandingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
