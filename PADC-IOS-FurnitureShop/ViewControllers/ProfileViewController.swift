@@ -10,21 +10,46 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var imvProfile: UIImageView!
+    @IBOutlet weak var cvOrders: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ImageRoundUtil.round(image: imvProfile)
     }
-    
 
-    /*
-    // MARK: - Navigation
+    @IBAction func onClickEditProfile(_ sender: Any) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+
+    @IBAction func onClickLogout(_ sender: Any) {
+
+        let dialogMessage = UIAlertController(title: "Logout",
+                                              message: "Are you sure you want to logout?",
+                                              preferredStyle: .alert)
+
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            self.doLogout()
+        })
+
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
+            print("Cancel button tapped")
+        })
+
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+
+    private func doLogout() {
+
+    }
 
 }
