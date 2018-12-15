@@ -10,9 +10,13 @@ import UIKit
 
 class StoreCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imvStore: UIImageView!
+    @IBOutlet weak var lblStoreName: UILabel!
+    @IBOutlet weak var lblStoreAddress: UILabel!
+    @IBOutlet weak var lblStorePhoneNumber: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }
