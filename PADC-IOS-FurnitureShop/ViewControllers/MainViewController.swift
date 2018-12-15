@@ -20,6 +20,7 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     @IBAction func goToSignUp(_ sender: Any) {
@@ -30,15 +31,23 @@ class MainViewController: BaseViewController {
 
     @IBAction func doSignIn(_ sender: Any) {
         
-        DataModel.shared.login(email: tfEmail.text!, password: tfPassword.text!, success: {
+        if !tfEmail.text!.isEmpty && !tfPassword.text!.isEmpty {
             
-            self.view.makeToast("Login Success.")
-            let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-            self.present(navigationController, animated: true, completion: nil)
-        }) {
-            self.view.makeToast("Login Fail.")
-            self.showAlertDialog(message: "Username or Password incorrect.")
+            DataModel.shared.login(email: tfEmail.text!, password: tfPassword.text!, success: {
+                self.goToHome()
+            }) {
+                self.view.makeToast("Login Fail.")
+                self.showAlertDialog(message: "Email or Password incorrect.")
+            }
         }
+        else {
+            self.showAlertDialog(message: "Please fill email and password.")
+        }
+    }
+    
+    func goToHome() {
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        self.present(navigationController, animated: true, completion: nil)
     }
 }
 

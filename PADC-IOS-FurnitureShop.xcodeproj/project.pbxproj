@@ -109,6 +109,14 @@
 			path = network;
 			sourceTree = "<group>";
 		};
+		116E797221C50A83008D0958 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				116E796121C4E471008D0958 /* BaseViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		6D1F852921C4935C0053AF8D /* component */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +138,13 @@
 		6D1F852F21C495FD0053AF8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				116E797221C50A83008D0958 /* base */,
 				99C0910D21B3B54D000F6CAE /* MainViewController.swift */,
 				6D1F853021C49AF80053AF8D /* SignUpViewController.swift */,
 				6D002AEA21C4BA35000EC689 /* HomeViewController.swift */,
 				6D031CF421C4DF3F008CF461 /* ProfileViewController.swift */,
 				6D031CF621C4DF53008CF461 /* StoresListingViewController.swift */,
 				6D031CF821C4DF70008CF461 /* BookmarksViewController.swift */,
-				116E796121C4E471008D0958 /* BaseViewController.swift */,
 				6D556DA421C4F00B00145AF4 /* ProductDetailViewController.swift */,
 				6D556DA621C4F55900145AF4 /* SearchResultViewController.swift */,
 			);

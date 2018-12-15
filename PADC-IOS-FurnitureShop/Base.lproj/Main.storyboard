@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w1p-M8-un6" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="300" width="343" height="42"/>
+                                        <rect key="frame" x="16" y="312.5" width="343" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="q0c-dV-TB6"/>
                                         </constraints>
@@ -35,27 +35,27 @@
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-7w-Xnw" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="358" width="343" height="42"/>
+                                        <rect key="frame" x="16" y="370.5" width="343" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="Lq4-Bn-3wu"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-Fg-xby">
-                                        <rect key="frame" x="16" y="416" width="343" height="42"/>
+                                        <rect key="frame" x="16" y="428.5" width="343" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UT-4f-8mi" customClass="ButtonWithCorner" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="42"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                 <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="4"/>
+                                                        <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -64,17 +64,17 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgS-lM-3Ys" customClass="ButtonWithCorner" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="42"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="Gig-Z2-cla"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                <state key="normal" title="Sign In">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Log In">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="4"/>
+                                                        <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -86,14 +86,14 @@
                                             <constraint firstAttribute="height" constant="42" id="0ji-HL-nkn"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-pb-USC">
-                                        <rect key="frame" x="172.5" y="474" width="30" height="26"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-pb-USC">
+                                        <rect key="frame" x="172.5" y="486.5" width="30" height="26"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bM-Z4-iw7" customClass="ButtonWithCorner" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="516" width="343" height="42"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bM-Z4-iw7" customClass="ButtonWithCorner" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="528.5" width="343" height="42"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="QAQ-Qm-RUh"/>
@@ -108,8 +108,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA9-aS-qLE" customClass="ButtonWithCorner" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="566" width="343" height="42"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA9-aS-qLE" customClass="ButtonWithCorner" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="578.5" width="343" height="42"/>
                                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="eSl-tG-Gbf"/>
@@ -133,6 +133,7 @@
                                     <constraint firstItem="9bM-Z4-iw7" firstAttribute="top" secondItem="0bb-pb-USC" secondAttribute="bottom" constant="16" id="7g7-zV-OzM"/>
                                     <constraint firstItem="w1p-M8-un6" firstAttribute="centerX" secondItem="Nbq-Cr-NV6" secondAttribute="centerX" id="9DZ-Kr-Dps"/>
                                     <constraint firstItem="xA9-aS-qLE" firstAttribute="centerX" secondItem="Nbq-Cr-NV6" secondAttribute="centerX" id="Bb9-A4-mYR"/>
+                                    <constraint firstItem="w1p-M8-un6" firstAttribute="centerY" secondItem="Nbq-Cr-NV6" secondAttribute="centerY" id="NYm-5m-aKE"/>
                                     <constraint firstAttribute="bottom" secondItem="xA9-aS-qLE" secondAttribute="bottom" constant="32" id="Qrr-mM-GRj"/>
                                     <constraint firstAttribute="trailing" secondItem="xA9-aS-qLE" secondAttribute="trailing" constant="16" id="REw-FB-1Ab"/>
                                     <constraint firstItem="sSr-Fg-xby" firstAttribute="leading" secondItem="Nbq-Cr-NV6" secondAttribute="leading" constant="16" id="ToO-u4-Gbq"/>
@@ -141,7 +142,6 @@
                                     <constraint firstItem="w1p-M8-un6" firstAttribute="leading" secondItem="Nbq-Cr-NV6" secondAttribute="leading" constant="16" id="gjn-cR-03d"/>
                                     <constraint firstItem="9bM-Z4-iw7" firstAttribute="leading" secondItem="Nbq-Cr-NV6" secondAttribute="leading" constant="16" id="i4c-wW-JCf"/>
                                     <constraint firstAttribute="trailing" secondItem="6hw-7w-Xnw" secondAttribute="trailing" constant="16" id="jAl-R2-7Hw"/>
-                                    <constraint firstItem="w1p-M8-un6" firstAttribute="top" secondItem="Nbq-Cr-NV6" secondAttribute="top" constant="300" id="mTt-n7-vhd"/>
                                     <constraint firstAttribute="trailing" secondItem="w1p-M8-un6" secondAttribute="trailing" constant="16" id="nQX-Ro-EsR"/>
                                     <constraint firstItem="0bb-pb-USC" firstAttribute="top" secondItem="sSr-Fg-xby" secondAttribute="bottom" constant="16" id="nwI-Om-49B"/>
                                     <constraint firstItem="xA9-aS-qLE" firstAttribute="top" secondItem="9bM-Z4-iw7" secondAttribute="bottom" constant="8" symbolic="YES" id="pZ6-AM-ges"/>
