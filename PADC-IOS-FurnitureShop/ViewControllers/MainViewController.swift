@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import Toast_Swift
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
 
     @IBOutlet weak var btnSignUp: ButtonWithCorner!
-
+    @IBOutlet weak var tfEmail: ShadowTextField!
+    @IBOutlet weak var tfPassword: ShadowTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,8 +30,15 @@ class MainViewController: UIViewController {
 
     @IBAction func doSignIn(_ sender: Any) {
         
-        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-        self.present(navigationController, animated: true, completion: nil)
+        DataModel.shared.login(email: tfEmail.text!, password: tfPassword.text!, success: {
+            
+            self.view.makeToast("Login Success.")
+            let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+            self.present(navigationController, animated: true, completion: nil)
+        }) {
+            self.view.makeToast("Login Fail.")
+            self.showAlertDialog(message: "Username or Password incorrect.")
+        }
     }
 }
 

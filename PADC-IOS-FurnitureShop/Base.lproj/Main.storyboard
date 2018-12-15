@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_entry" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-7B-RCd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <viewLayoutGuide key="safeArea" id="rOV-cg-3Kq"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nbq-Cr-NV6">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="w1p-M8-un6" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w1p-M8-un6" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                         <rect key="frame" x="16" y="300" width="343" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="q0c-dV-TB6"/>
@@ -34,14 +34,14 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-7w-Xnw" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-7w-Xnw" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                         <rect key="frame" x="16" y="358" width="343" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="Lq4-Bn-3wu"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-Fg-xby">
                                         <rect key="frame" x="16" y="416" width="343" height="42"/>
@@ -154,19 +154,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a5z-7B-RCd" secondAttribute="bottom" id="9Za-Q9-eVZ"/>
+                            <constraint firstAttribute="bottom" secondItem="a5z-7B-RCd" secondAttribute="bottom" id="9Za-Q9-eVZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nbq-Cr-NV6" secondAttribute="trailing" id="GzK-up-Ftt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nbq-Cr-NV6" secondAttribute="bottom" id="NtO-f4-HBf"/>
+                            <constraint firstAttribute="bottom" secondItem="Nbq-Cr-NV6" secondAttribute="bottom" id="NtO-f4-HBf"/>
                             <constraint firstItem="Nbq-Cr-NV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RRg-8i-VJJ"/>
                             <constraint firstItem="a5z-7B-RCd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WJc-dU-PvC"/>
-                            <constraint firstItem="a5z-7B-RCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bbN-Fn-Glb"/>
-                            <constraint firstItem="Nbq-Cr-NV6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ch2-j5-vfy"/>
+                            <constraint firstItem="a5z-7B-RCd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bbN-Fn-Glb"/>
+                            <constraint firstItem="Nbq-Cr-NV6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ch2-j5-vfy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a5z-7B-RCd" secondAttribute="trailing" id="quW-UL-6Yu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="btnSignUp" destination="9UT-4f-8mi" id="hTc-OL-fW0"/>
+                        <outlet property="tfEmail" destination="w1p-M8-un6" id="gxy-mj-47G"/>
+                        <outlet property="tfPassword" destination="6hw-7w-Xnw" id="LjE-a9-i7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -205,7 +207,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1L9-G6-fVj">
                                         <rect key="frame" x="16" y="250" width="343" height="216"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fullname" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="teK-1X-788" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fullname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="teK-1X-788" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="AMD-YY-l8J"/>
@@ -214,7 +216,7 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="URm-B2-DAN" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="URm-B2-DAN" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="58" width="343" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="uKJ-ZA-yoc"/>
@@ -223,23 +225,23 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="T9r-Bn-BBc" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T9r-Bn-BBc" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="116" width="343" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="uXq-kJ-cTK"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="T1B-x9-URm" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T1B-x9-URm" customClass="ShadowTextField" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="174" width="343" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="EnW-15-PeP"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -258,6 +260,9 @@
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onTapBtnSignUp:" destination="Yam-s4-qBY" eventType="touchUpInside" id="RrW-qU-114"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,7 +301,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnSingUp" destination="N0r-k8-tyq" id="O4L-sU-XWp"/>
                         <outlet property="imvProfilePhoto" destination="X2D-B1-a5j" id="ubs-tt-bMn"/>
+                        <outlet property="tfEmail" destination="URm-B2-DAN" id="WI7-S5-nB3"/>
+                        <outlet property="tfFullName" destination="teK-1X-788" id="Hv3-z7-SCx"/>
+                        <outlet property="tfPassword" destination="T9r-Bn-BBc" id="HsJ-V3-5FE"/>
+                        <outlet property="tfRetypePassword" destination="T1B-x9-URm" id="L6w-UO-D4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUW-Da-4gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
