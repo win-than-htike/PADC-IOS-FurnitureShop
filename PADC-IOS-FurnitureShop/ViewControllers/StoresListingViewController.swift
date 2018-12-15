@@ -20,7 +20,7 @@ class StoresListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.stetDummyData()
+        self.setDummyData()
 
         self.cvStoresListing.delegate = self
         self.cvStoresListing.dataSource = self
@@ -32,7 +32,7 @@ class StoresListingViewController: UIViewController {
                                       collectionView: self.cvStoresListing)
     }
 
-    private func stetDummyData() {
+    private func setDummyData() {
         storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
         storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
         storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))

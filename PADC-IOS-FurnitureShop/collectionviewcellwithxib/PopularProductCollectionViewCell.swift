@@ -2,17 +2,17 @@
 //  ProductCategoryCollectionViewCell.swift
 //  PADC-IOS-FurnitureShop
 //
-//  Created by Elissa Software on 12/16/18.
+//  Created by Elissa Software on 12/15/18.
 //  Copyright © 2018 padcmyanmar. All rights reserved.
 //
 
 import UIKit
 
-class ProductCategoryCollectionViewCell: UICollectionViewCell {
+class PopularProductCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var imvProductCategory: UIImageView!
-    @IBOutlet weak var lblProductCategoryName: UILabel!
-
+    @IBOutlet weak var lblViewMorePopularProducts: UILabel!
+    @IBOutlet weak var cvPopularProduct: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
