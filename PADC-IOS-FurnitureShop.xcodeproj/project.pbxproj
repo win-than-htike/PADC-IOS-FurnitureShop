@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116E796221C4E471008D0958 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796121C4E471008D0958 /* BaseViewController.swift */; };
+		116E796621C4E53B008D0958 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796521C4E53B008D0958 /* UserVO.swift */; };
+		116E796921C4E5A1008D0958 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796821C4E5A1008D0958 /* DataModel.swift */; };
+		116E796C21C4E69B008D0958 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796B21C4E69B008D0958 /* NetworkManager.swift */; };
+		116E796E21C4E6EB008D0958 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796D21C4E6EB008D0958 /* Extensions.swift */; };
+		116E797021C4E7FD008D0958 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 116E796F21C4E7FC008D0958 /* GoogleService-Info.plist */; };
 		42BC15C6BEE445468E23852E /* Pods_PADC_IOS_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51A18D357131AA52187C486 /* Pods_PADC_IOS_FurnitureShop.framework */; };
 		6D002AEB21C4BA35000EC689 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D002AEA21C4BA35000EC689 /* HomeViewController.swift */; };
 		6D031CF521C4DF3F008CF461 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D031CF421C4DF3F008CF461 /* ProfileViewController.swift */; };
@@ -29,6 +35,12 @@
 
 /* Begin PBXFileReference section */
 		069F19560D9A16490F05AA9A /* Pods-PADC-IOS-FurnitureShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PADC-IOS-FurnitureShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-PADC-IOS-FurnitureShop/Pods-PADC-IOS-FurnitureShop.release.xcconfig"; sourceTree = "<group>"; };
+		116E796121C4E471008D0958 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		116E796521C4E53B008D0958 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
+		116E796821C4E5A1008D0958 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		116E796B21C4E69B008D0958 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		116E796D21C4E6EB008D0958 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		116E796F21C4E7FC008D0958 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D002AEA21C4BA35000EC689 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6D031CF421C4DF3F008CF461 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6D031CF621C4DF53008CF461 /* StoresListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresListingViewController.swift; sourceTree = "<group>"; };
@@ -64,10 +76,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		116E796321C4E518008D0958 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				116E796721C4E593008D0958 /* model */,
+				116E796421C4E524008D0958 /* vos */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		116E796421C4E524008D0958 /* vos */ = {
+			isa = PBXGroup;
+			children = (
+				116E796521C4E53B008D0958 /* UserVO.swift */,
+			);
+			path = vos;
+			sourceTree = "<group>";
+		};
+		116E796721C4E593008D0958 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				116E796821C4E5A1008D0958 /* DataModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		116E796A21C4E682008D0958 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				116E796B21C4E69B008D0958 /* NetworkManager.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		6D1F852921C4935C0053AF8D /* component */ = {
 			isa = PBXGroup;
 			children = (
 				6D1F852A21C493720053AF8D /* ui */,
+				116E796D21C4E6EB008D0958 /* Extensions.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -90,6 +136,7 @@
 				6D031CF421C4DF3F008CF461 /* ProfileViewController.swift */,
 				6D031CF621C4DF53008CF461 /* StoresListingViewController.swift */,
 				6D031CF821C4DF70008CF461 /* BookmarksViewController.swift */,
+				116E796121C4E471008D0958 /* BaseViewController.swift */,
 				6D556DA421C4F00B00145AF4 /* ProductDetailViewController.swift */,
 				6D556DA621C4F55900145AF4 /* SearchResultViewController.swift */,
 			);
@@ -135,11 +182,14 @@
 			isa = PBXGroup;
 			children = (
 				6D556DA821C4F8CC00145AF4 /* collectionviewcellwithxib */,
-				6D1F853221C49FD00053AF8D /* utils */,
-				6D1F852F21C495FD0053AF8D /* ViewControllers */,
 				6D1F852921C4935C0053AF8D /* component */,
+				6D1F853221C49FD00053AF8D /* utils */,
+				116E796A21C4E682008D0958 /* network */,
+				116E796321C4E518008D0958 /* data */,
+				6D1F852F21C495FD0053AF8D /* ViewControllers */,
 				99C0910B21B3B54D000F6CAE /* AppDelegate.swift */,
 				99C0910F21B3B54D000F6CAE /* Main.storyboard */,
+				116E796F21C4E7FC008D0958 /* GoogleService-Info.plist */,
 				99C0911221B3B54E000F6CAE /* Assets.xcassets */,
 				99C0911421B3B54E000F6CAE /* LaunchScreen.storyboard */,
 				99C0911721B3B54E000F6CAE /* Info.plist */,
@@ -229,6 +279,7 @@
 				99C0911621B3B54E000F6CAE /* LaunchScreen.storyboard in Resources */,
 				99C0911321B3B54E000F6CAE /* Assets.xcassets in Resources */,
 				99C0911121B3B54D000F6CAE /* Main.storyboard in Resources */,
+				116E797021C4E7FD008D0958 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +308,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -277,6 +329,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -338,12 +391,17 @@
 			files = (
 				6D031CF921C4DF70008CF461 /* BookmarksViewController.swift in Sources */,
 				6D1F853421C49FE40053AF8D /* ImageRoundUtil.swift in Sources */,
+				116E796221C4E471008D0958 /* BaseViewController.swift in Sources */,
 				6D031CF721C4DF53008CF461 /* StoresListingViewController.swift in Sources */,
 				6D556DAB21C4F94E00145AF4 /* StoreCollectionViewCell.swift in Sources */,
 				6D002AEB21C4BA35000EC689 /* HomeViewController.swift in Sources */,
 				6D1F852C21C4939F0053AF8D /* ButtonWithCorner.swift in Sources */,
+				116E796921C4E5A1008D0958 /* DataModel.swift in Sources */,
 				99C0910E21B3B54D000F6CAE /* MainViewController.swift in Sources */,
+				116E796621C4E53B008D0958 /* UserVO.swift in Sources */,
 				99C0910C21B3B54D000F6CAE /* AppDelegate.swift in Sources */,
+				116E796E21C4E6EB008D0958 /* Extensions.swift in Sources */,
+				116E796C21C4E69B008D0958 /* NetworkManager.swift in Sources */,
 				6D556DA521C4F00B00145AF4 /* ProductDetailViewController.swift in Sources */,
 				6D1F852E21C494A00053AF8D /* ShadowTextField.swift in Sources */,
 				6D031CF521C4DF3F008CF461 /* ProfileViewController.swift in Sources */,
