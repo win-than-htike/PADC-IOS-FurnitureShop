@@ -23,5 +23,10 @@ class MainViewController: UIViewController {
         self.present(navigationController, animated: true, completion: nil)
     }
 
+    @IBAction func doSignIn(_ sender: Any) {
+        
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "LandingViewController") as! UINavigationController
+        self.present(navigationController, animated: true, completion: nil)
+    }
 }
 
