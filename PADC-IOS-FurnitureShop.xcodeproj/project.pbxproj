@@ -16,6 +16,8 @@
 		6D1F852E21C494A00053AF8D /* ShadowTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F852D21C494A00053AF8D /* ShadowTextField.swift */; };
 		6D1F853121C49AF80053AF8D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F853021C49AF80053AF8D /* SignUpViewController.swift */; };
 		6D1F853421C49FE40053AF8D /* ImageRoundUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F853321C49FE40053AF8D /* ImageRoundUtil.swift */; };
+		6D556DA521C4F00B00145AF4 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D556DA421C4F00B00145AF4 /* ProductDetailViewController.swift */; };
+		6D556DA721C4F55900145AF4 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D556DA621C4F55900145AF4 /* SearchResultViewController.swift */; };
 		99C0910C21B3B54D000F6CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C0910B21B3B54D000F6CAE /* AppDelegate.swift */; };
 		99C0910E21B3B54D000F6CAE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C0910D21B3B54D000F6CAE /* MainViewController.swift */; };
 		99C0911121B3B54D000F6CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C0910F21B3B54D000F6CAE /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		6D1F852D21C494A00053AF8D /* ShadowTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowTextField.swift; sourceTree = "<group>"; };
 		6D1F853021C49AF80053AF8D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6D1F853321C49FE40053AF8D /* ImageRoundUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRoundUtil.swift; sourceTree = "<group>"; };
+		6D556DA421C4F00B00145AF4 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		6D556DA621C4F55900145AF4 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		99C0910821B3B54D000F6CAE /* PADC-IOS-FurnitureShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PADC-IOS-FurnitureShop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C0910B21B3B54D000F6CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99C0910D21B3B54D000F6CAE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				6D031CF421C4DF3F008CF461 /* ProfileViewController.swift */,
 				6D031CF621C4DF53008CF461 /* StoresListingViewController.swift */,
 				6D031CF821C4DF70008CF461 /* BookmarksViewController.swift */,
+				6D556DA421C4F00B00145AF4 /* ProductDetailViewController.swift */,
+				6D556DA621C4F55900145AF4 /* SearchResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -322,8 +328,10 @@
 				6D1F852C21C4939F0053AF8D /* ButtonWithCorner.swift in Sources */,
 				99C0910E21B3B54D000F6CAE /* MainViewController.swift in Sources */,
 				99C0910C21B3B54D000F6CAE /* AppDelegate.swift in Sources */,
+				6D556DA521C4F00B00145AF4 /* ProductDetailViewController.swift in Sources */,
 				6D1F852E21C494A00053AF8D /* ShadowTextField.swift in Sources */,
 				6D031CF521C4DF3F008CF461 /* ProfileViewController.swift in Sources */,
+				6D556DA721C4F55900145AF4 /* SearchResultViewController.swift in Sources */,
 				6D1F853121C49AF80053AF8D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,7 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48LBJ9FZ5F;
+				DEVELOPMENT_TEAM = 34T43Q35Y8;
 				INFOPLIST_FILE = "PADC-IOS-FurnitureShop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48LBJ9FZ5F;
+				DEVELOPMENT_TEAM = 34T43Q35Y8;
 				INFOPLIST_FILE = "PADC-IOS-FurnitureShop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

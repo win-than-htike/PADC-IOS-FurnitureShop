@@ -415,12 +415,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-Ak-8CQ">
+                            <searchBar contentMode="redraw" placeholder="Search by Product name" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-Ak-8CQ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v5s-wU-qwi">
-                                <rect key="frame" x="16" y="128" width="343" height="482"/>
+                                <rect key="frame" x="8" y="128" width="359" height="482"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="myW-Yr-IUX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -442,13 +446,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fPP-Ak-8CQ" firstAttribute="top" secondItem="0sM-1G-MFX" secondAttribute="top" id="5MR-J5-E42"/>
-                            <constraint firstItem="0sM-1G-MFX" firstAttribute="trailing" secondItem="v5s-wU-qwi" secondAttribute="trailing" constant="16" id="MI7-lM-n5w"/>
-                            <constraint firstItem="v5s-wU-qwi" firstAttribute="leading" secondItem="0sM-1G-MFX" secondAttribute="leading" constant="16" id="R2Z-sr-OLI"/>
-                            <constraint firstItem="0sM-1G-MFX" firstAttribute="bottom" secondItem="v5s-wU-qwi" secondAttribute="bottom" constant="8" id="UrB-yR-DKd"/>
-                            <constraint firstItem="fPP-Ak-8CQ" firstAttribute="leading" secondItem="0sM-1G-MFX" secondAttribute="leading" id="eL4-Rx-Bhj"/>
-                            <constraint firstItem="fPP-Ak-8CQ" firstAttribute="trailing" secondItem="0sM-1G-MFX" secondAttribute="trailing" id="xvw-Cy-xFx"/>
-                            <constraint firstItem="v5s-wU-qwi" firstAttribute="top" secondItem="fPP-Ak-8CQ" secondAttribute="bottom" constant="8" id="zZV-B2-K72"/>
+                            <constraint firstItem="fPP-Ak-8CQ" firstAttribute="trailing" secondItem="0sM-1G-MFX" secondAttribute="trailing" id="IQd-Ja-Sgd"/>
+                            <constraint firstItem="v5s-wU-qwi" firstAttribute="leading" secondItem="0sM-1G-MFX" secondAttribute="leading" constant="8" id="VTM-U8-o4i"/>
+                            <constraint firstItem="fPP-Ak-8CQ" firstAttribute="leading" secondItem="0sM-1G-MFX" secondAttribute="leading" id="Xpd-XA-5HC"/>
+                            <constraint firstItem="fPP-Ak-8CQ" firstAttribute="top" secondItem="0sM-1G-MFX" secondAttribute="top" id="fye-7u-fon"/>
+                            <constraint firstItem="v5s-wU-qwi" firstAttribute="top" secondItem="fPP-Ak-8CQ" secondAttribute="bottom" constant="8" id="qj8-Bd-IRE"/>
+                            <constraint firstItem="0sM-1G-MFX" firstAttribute="bottom" secondItem="v5s-wU-qwi" secondAttribute="bottom" constant="8" id="sXb-Xy-r0c"/>
+                            <constraint firstItem="0sM-1G-MFX" firstAttribute="trailing" secondItem="v5s-wU-qwi" secondAttribute="trailing" constant="8" id="snv-Ut-IZu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0sM-1G-MFX"/>
                     </view>
@@ -497,6 +501,9 @@
                         <viewLayoutGuide key="safeArea" id="SzK-1z-zCY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Stores" id="RBd-bd-inU"/>
+                    <connections>
+                        <outlet property="cvStoresListing" destination="cem-LS-HA2" id="mMQ-3E-O6r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArH-3U-C7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -561,20 +568,48 @@
             </objects>
             <point key="canvasLocation" x="-1481" y="1682"/>
         </scene>
-        <!--View Controller-->
+        <!--Product Detail View Controller-->
         <scene sceneID="1AB-8r-dqN">
             <objects>
-                <viewController id="kuO-VU-ykQ" sceneMemberID="viewController">
+                <viewController id="kuO-VU-ykQ" customClass="ProductDetailViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UEN-Px-mbQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-qn-y16">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ucp-qn-y16" firstAttribute="leading" secondItem="Twb-wv-I8U" secondAttribute="leading" id="L5c-f0-9ou"/>
+                            <constraint firstItem="ucp-qn-y16" firstAttribute="top" secondItem="Twb-wv-I8U" secondAttribute="top" id="jkJ-GJ-QQA"/>
+                            <constraint firstItem="Twb-wv-I8U" firstAttribute="bottom" secondItem="ucp-qn-y16" secondAttribute="bottom" id="kQk-Do-u18"/>
+                            <constraint firstItem="Twb-wv-I8U" firstAttribute="trailing" secondItem="ucp-qn-y16" secondAttribute="trailing" id="ugM-7a-DE6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Twb-wv-I8U"/>
                     </view>
+                    <navigationItem key="navigationItem" id="E8y-BD-tLW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8l-e7-6TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1493" y="2626"/>
+            <point key="canvasLocation" x="-695" y="2625"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="37j-Ux-KxJ">
+            <objects>
+                <viewController id="xtj-IO-Tte" customClass="SearchResultViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lyb-vX-uLa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xSO-oe-zPF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="emp-NW-iku"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imG-Id-chH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248.8" y="2625.3373313343332"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="6IG-Tj-RJn">
@@ -615,7 +650,7 @@
                         <viewLayoutGuide key="safeArea" id="YS3-wz-TOQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmarks" id="83T-ck-xhh">
-                        <barButtonItem key="rightBarButtonItem" title="Delete" image="ic_delete" id="VzR-Rm-3NX">
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="VzR-Rm-3NX">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onClickDeleteBookmarks:" destination="Ked-3M-fvY" id="3W4-Gp-bGd"/>
@@ -684,12 +719,47 @@
             </objects>
             <point key="canvasLocation" x="1742" y="1682"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eC7-tR-rrR">
+            <objects>
+                <navigationController storyboardIdentifier="ProductDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="qOX-Su-yWB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HWS-jX-z0C">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kuO-VU-ykQ" kind="relationship" relationship="rootViewController" id="s6Z-qY-Lcc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNA-M2-fKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1493.5999999999999" y="2625.3373313343332"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AFt-Su-7SC">
+            <objects>
+                <navigationController storyboardIdentifier="SearchResultViewController" automaticallyAdjustsScrollViewInsets="NO" id="zqj-tM-3ca" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ILk-Pf-eYs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xtj-IO-Tte" kind="relationship" relationship="rootViewController" id="RAS-zB-UMk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2F-4t-eZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309.60000000000002" y="2625.3373313343332"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_entry" width="2956" height="5746"/>
         <image name="ic_back" width="26" height="26"/>
         <image name="ic_bookmark" width="26" height="26"/>
-        <image name="ic_delete" width="26" height="26"/>
         <image name="ic_home" width="26" height="26"/>
         <image name="ic_profile" width="26" height="26"/>
         <image name="ic_profile_placeholder" width="512" height="512"/>
