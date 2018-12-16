@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
+import SwiftyJSON
 
 class NetworkManager {
     
@@ -102,6 +103,27 @@ class NetworkManager {
             
         }
         
+    }
+    
+    func getStoreList(success : @escaping ([StoreVO]) -> Void, failure : @escaping (String) -> Void) {
+        
+        rootRef.child("stores").observe(.value) { (dataSnapshot) in
+            
+            if let stores = dataSnapshot.children.allObjects as? [DataSnapshot] {
+                
+                var storeList: [StoreVO] = []
+                
+                for store in stores {
+                    
+                    if let value = store.value as? [String : AnyObject] {
+                        
+                        storeList.append(StoreVO.parseToStoreVO(json: value))
+                    }
+                }
+                
+                success(storeList)
+            }
+        }
     }
     
 }

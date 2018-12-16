@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 
 class DataModel {
     
@@ -26,6 +27,16 @@ class DataModel {
     
     func register(user : UserVO, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
         
+        Auth.auth().createUser(withEmail: user.email!, password: user.password!) { user, error in
+            if error == nil {
+                
+                Auth.auth().signIn(withEmail: self.user!.email!,
+                                   password: self.user!.password!)
+            }else {
+                failure("Error")
+            }
+        }
+        
         let ref = Database.database().reference()
         ref.child("users").child(user.id).setValue(UserVO.parseToDictionary(user: user))
         success()
@@ -40,6 +51,17 @@ class DataModel {
             
         }) {
             failure()
+        }
+    }
+    
+    func getStores(success : @escaping ([StoreVO]) -> Void, failure : @escaping (String) -> Void) {
+        
+        NetworkManager.shared.getStoreList(success: { (data) in
+            
+            success(data)
+            
+        }) { (error) in
+            failure(error)
         }
     }
 }

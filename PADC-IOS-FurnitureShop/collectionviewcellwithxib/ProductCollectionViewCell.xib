@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="211" height="264"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="211" height="264"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4My-aK-Phf">
+                        <rect key="frame" x="0.0" y="0.0" width="211" height="264"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy_store" translatesAutoresizingMaskIntoConstraints="NO" id="pJ8-il-lru">
+                                <rect key="frame" x="0.0" y="0.0" width="211" height="264"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-kz-25f">
+                                <rect key="frame" x="0.0" y="204" width="211" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-La-1UC">
+                                        <rect key="frame" x="8" y="0.0" width="195" height="21"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nq5-QP-MtB">
+                                        <rect key="frame" x="8" y="29" width="195" height="21"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AQD-a3-98h"/>
+                                    <constraint firstItem="Nq5-QP-MtB" firstAttribute="leading" secondItem="qEx-kz-25f" secondAttribute="leading" constant="8" id="GX6-rW-GTn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nq5-QP-MtB" secondAttribute="trailing" constant="8" id="SdX-Zr-tRO"/>
+                                    <constraint firstAttribute="trailing" secondItem="VTY-La-1UC" secondAttribute="trailing" constant="8" id="bmF-t5-Hka"/>
+                                    <constraint firstItem="Nq5-QP-MtB" firstAttribute="top" secondItem="VTY-La-1UC" secondAttribute="bottom" constant="8" id="gip-wd-2cR"/>
+                                    <constraint firstItem="VTY-La-1UC" firstAttribute="top" secondItem="qEx-kz-25f" secondAttribute="top" id="qRq-Sd-XxZ"/>
+                                    <constraint firstItem="VTY-La-1UC" firstAttribute="leading" secondItem="qEx-kz-25f" secondAttribute="leading" constant="8" id="rDa-Ml-xmb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qEx-kz-25f" secondAttribute="bottom" id="G0X-xw-cRy"/>
+                            <constraint firstItem="pJ8-il-lru" firstAttribute="leading" secondItem="4My-aK-Phf" secondAttribute="leading" id="Igh-gi-DyA"/>
+                            <constraint firstAttribute="trailing" secondItem="qEx-kz-25f" secondAttribute="trailing" id="U2h-YD-gfS"/>
+                            <constraint firstItem="pJ8-il-lru" firstAttribute="top" secondItem="4My-aK-Phf" secondAttribute="top" id="VJC-J6-ue7"/>
+                            <constraint firstAttribute="trailing" secondItem="pJ8-il-lru" secondAttribute="trailing" id="WGn-cW-X4O"/>
+                            <constraint firstAttribute="bottom" secondItem="pJ8-il-lru" secondAttribute="bottom" id="dEC-46-22t"/>
+                            <constraint firstItem="qEx-kz-25f" firstAttribute="leading" secondItem="4My-aK-Phf" secondAttribute="leading" id="dTe-qk-VBU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4My-aK-Phf" secondAttribute="bottom" id="0HG-QS-Oe5"/>
+                <constraint firstItem="4My-aK-Phf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="I87-WF-DBd"/>
+                <constraint firstItem="4My-aK-Phf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bNr-pd-h4f"/>
+                <constraint firstAttribute="trailing" secondItem="4My-aK-Phf" secondAttribute="trailing" id="rrn-1n-slt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="211" height="264"/>
+            <connections>
+                <outlet property="imvProduct" destination="pJ8-il-lru" id="wD9-No-dHD"/>
+                <outlet property="lblPrice" destination="Nq5-QP-MtB" id="HLc-2F-QPz"/>
+                <outlet property="lblProductName" destination="VTY-La-1UC" id="0xf-jP-8wP"/>
+            </connections>
+            <point key="canvasLocation" x="130" y="155"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dummy_store" width="3537" height="3887"/>
+    </resources>
+</document>
