@@ -109,6 +109,8 @@ extension HomeViewController: UICollectionViewDelegate {
 
 
         let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductListingViewController") as! UINavigationController
+        let vc = navigationController.viewControllers[0] as! ProductListingViewController
+        vc.category = categoryList[indexPath.row]
         self.present(navigationController, animated: true, completion: nil)
 
     }

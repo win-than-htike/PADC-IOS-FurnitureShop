@@ -101,9 +101,27 @@ class DataModel {
                                         productItem.price = p["price"] as? String ?? ""
                                         productItem.size = p["size"] as? String ?? ""
                                         productItem.status = p["status"] as? String ?? ""
-                                        productItem.images = p["image"] as? [String] ?? []
+                                        
+                                        self.rootRef.child("categories").child(category.key).child(product.key).child("image").observe(.value) { (result) in
+                                            
+                                            if let images = result.children.allObjects as? [DataSnapshot] {
+                                                
+                                                var i = 0
+                                                for (image) in images {
+                                                    
+                                                    if let img = image.value as? [String: Any] {
+                                                        
+                                                        let url = img["\(i)"] as? String ?? ""
+                                                        productItem.images.append(url)
+                                                    }
+                                                    i += 1
+                                                }
+                                            }
+                                            success(categoryList)
+                                        }
                                         
                                         categoryItem.productsList.append(productItem)
+                                        success(categoryList)
                                     }
                                 }
                             } else {

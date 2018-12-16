@@ -12,10 +12,12 @@ class ProductListingViewController: UIViewController {
 
     @IBOutlet weak var cvProductListing: UICollectionView!
     
+    var category : CategoryVO? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Dummy Category"
+        self.title = category?.name
 
         self.cvProductListing.delegate = self
         self.cvProductListing.dataSource = self
@@ -38,14 +40,13 @@ extension ProductListingViewController: UICollectionViewDataSource, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return category?.productsList.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-
-
+        cell.bindData(data: category?.productsList[indexPath.row] ?? ProductVO())
         return cell
     }
 
