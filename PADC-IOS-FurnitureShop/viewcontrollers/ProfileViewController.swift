@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblUsername: UILabel!
     @IBOutlet weak var cvOrders: UICollectionView!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +60,30 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func editProfileImage(_ sender: Any) {
-        self.chooseUpload(sender as! UIButton, imagePickerControllerDelegate: self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+        self.chooseUpload(sender as! UIButton, imagePickerControllerDelegate: self)
+    }
+}
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+
+        self.dismiss(animated: true, completion: nil)
+
+        if let pickedImage = info[.editedImage] as? UIImage {
+            self.showLoadingIndicator()
+
+            DataModel.shared.uploadImage(data: pickedImage.pngData(), success: { (url) in
+
+                self.imvProfile.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "ic_profile_placeholder"))
+
+                DataModel.shared.user?.image = url
+                self.hideLoadingIndicator()
+            }) {
+                self.showAlertDialog(message: "Error.")
+                self.hideLoadingIndicator()
+            }
+
+        }
     }
 }

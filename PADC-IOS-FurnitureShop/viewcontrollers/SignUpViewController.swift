@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var btnSingUp: ButtonWithCorner!
 
     let user = UserVO()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -84,12 +84,17 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
 
         if let pickedImage = info[.editedImage] as? UIImage {
 
+            self.showLoadingIndicator()
+
             DataModel.shared.uploadImage(data: pickedImage.pngData(), success: { (url) in
 
                 self.imvProfilePhoto.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "ic_profile_placeholder"))
                 self.user.image = url
+
+                self.hideLoadingIndicator()
             }) {
                 self.showAlertDialog(message: "Error.")
+                self.hideLoadingIndicator()
             }
 
         }
