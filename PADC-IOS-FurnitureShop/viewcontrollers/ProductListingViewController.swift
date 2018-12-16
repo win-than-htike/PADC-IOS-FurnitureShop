@@ -11,6 +11,7 @@ import UIKit
 class ProductListingViewController: UIViewController {
 
     @IBOutlet weak var cvProductListing: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,5 +60,7 @@ extension ProductListingViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! UINavigationController
+        self.present(navigationController, animated: true, completion: nil)
     }
 }
