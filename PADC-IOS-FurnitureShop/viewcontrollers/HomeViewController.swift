@@ -104,8 +104,9 @@ extension HomeViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        if(indexPath.row == 0) {
-            //Do Nothing
-        }
+
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductListingViewController") as! UINavigationController
+        self.present(navigationController, animated: true, completion: nil)
+
     }
 }

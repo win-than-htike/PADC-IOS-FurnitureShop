@@ -26,10 +26,26 @@ class PopularProductCollectionViewCell: UICollectionViewCell {
         self.cellRegister()
         self.cvPopularProduct.delegate = self
         self.cvPopularProduct.dataSource = self
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToProductListing))
+        lblViewMorePopularProducts.isUserInteractionEnabled = true
+        lblViewMorePopularProducts.addGestureRecognizer(tap)
     }
 
     private func cellRegister() {
         CellRegisterUtil.cellRegister(nibName: "ProductCollectionViewCell", collectionView: self.cvPopularProduct)
+    }
+
+    @objc func goToProductListing(sender: UITapGestureRecognizer) {
+
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyBoard.instantiateViewController(withIdentifier: "ProductListingViewController") as! UINavigationController
+
+        //let vc = navigationController.topViewController as! ProductListingViewController
+
+        //Pass argument
+
+        self.window?.rootViewController?.present(navigationController, animated: true, completion: nil)
     }
 }
 

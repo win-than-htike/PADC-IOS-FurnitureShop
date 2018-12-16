@@ -587,7 +587,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-qn-y16">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -615,7 +615,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xSO-oe-zPF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="emp-NW-iku"/>
+                    <navigationItem key="navigationItem" id="emp-NW-iku">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="6Yj-EY-USy"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="kuO-VU-ykQ" kind="show" id="UHO-GM-CIG"/>
                     </connections>
@@ -671,6 +673,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cvBookmarkedPrdoucts" destination="azm-Gd-Ftg" id="9cJ-7l-UWG"/>
                         <segue destination="kuO-VU-ykQ" kind="show" id="fFa-7L-vw2"/>
                     </connections>
                 </viewController>
@@ -742,11 +745,47 @@
                     <view key="view" contentMode="scaleToFill" id="6jX-OD-2Oa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7bi-9h-7Su">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9CY-uT-CrD">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XXl-4b-RAA">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7bi-9h-7Su" firstAttribute="leading" secondItem="pK6-rH-k9v" secondAttribute="leading" id="R8y-lw-FvQ"/>
+                            <constraint firstItem="pK6-rH-k9v" firstAttribute="bottom" secondItem="7bi-9h-7Su" secondAttribute="bottom" id="V0E-nw-rCd"/>
+                            <constraint firstItem="7bi-9h-7Su" firstAttribute="top" secondItem="pK6-rH-k9v" secondAttribute="top" id="k1f-uS-3o2"/>
+                            <constraint firstItem="pK6-rH-k9v" firstAttribute="trailing" secondItem="7bi-9h-7Su" secondAttribute="trailing" id="us0-Au-3RO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pK6-rH-k9v"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vLT-4I-Ooi"/>
+                    <navigationItem key="navigationItem" id="vLT-4I-Ooi">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="rB7-cv-Me0">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onGoBack:" destination="eBA-AT-h98" id="X4Q-LZ-0Cp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="cvProductListing" destination="7bi-9h-7Su" id="Qc3-4X-Iqh"/>
                         <segue destination="kuO-VU-ykQ" kind="show" id="FXg-i3-iww"/>
                     </connections>
                 </viewController>
@@ -819,9 +858,9 @@
         <image name="ic_stores_listing" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MAD-g5-LV4"/>
+        <segue reference="rid-FB-odj"/>
         <segue reference="RAS-zB-UMk"/>
-        <segue reference="rHg-gL-GXx"/>
+        <segue reference="FXg-i3-iww"/>
         <segue reference="j7D-OD-KMp"/>
     </inferredMetricsTieBreakers>
 </document>
