@@ -97,7 +97,7 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         if indexPath.section == 0 {
-            return CGSize(width: self.view.frame.width, height: self.view.frame.height * 0.4)
+            return CGSize(width: self.view.frame.width, height: 350)
         } else {
             let width = collectionView.frame.width / 2 - 6
             let height = (collectionView.frame.width / 3)
