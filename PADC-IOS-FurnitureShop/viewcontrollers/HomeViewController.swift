@@ -19,13 +19,12 @@ class HomeViewController: UIViewController {
                            status: String,
                            image: String)] = []
 
-    var productCategory: [CategoryVO] = []
+    var categoryList: [CategoryVO] = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.setDummyData()
         loadCategory()
 
         self.cvProductListing.dataSource = self
@@ -33,29 +32,14 @@ class HomeViewController: UIViewController {
 
         self.cellsRegister()
     }
-
-    private func setDummyData() {
-
-//        productCategory.append((name: "Furniture", image: "dummy_product_catrgory.png"))
-//        productCategory.append((name: "Office", image: "dummy_product_catrgory.png"))
-//        productCategory.append((name: "Outdoor", image: "dummy_product_catrgory.png"))
-//        productCategory.append((name: "Living Room", image: "dummy_product_catrgory.png"))
-//        productCategory.append((name: "Kitchen", image: "dummy_product_catrgory.png"))
-//        productCategory.append((name: "Bed Room", image: "dummy_product_catrgory.png"))
-//        productCategory.append((name: "Baby Room", image: "dummy_product_catrgory.png"))
-//        productCategory.append((name: "Dinning Room", image: "dummy_product_catrgory.png"))
-
-    }
     
     func loadCategory() {
         
         showLoadingIndicator()
         DataModel.shared.getCategoryList(success: { (data) in
             
-            self.productCategory.removeAll()
-            for category in data {
-                self.productCategory.append(category)
-            }
+            self.categoryList.removeAll()
+            self.categoryList = data
             self.cvProductListing.reloadData()
             self.hideLoadingIndicator()
             
@@ -84,7 +68,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if section == 0 {
             return 1
         } else {
-            return productCategory.count
+            return categoryList.count
         }
     }
 
@@ -98,8 +82,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCategoryCollectionViewCell", for: indexPath) as! ProductCategoryCollectionViewCell
 
-            cell.imvProductCategory?.sd_setImage(with: URL(string: productCategory[indexPath.row].image ?? ""), completed: nil)
-            cell.lblProductCategoryName.text = productCategory[indexPath.row].name
+            cell.imvProductCategory?.sd_setImage(with: URL(string: categoryList[indexPath.row].image ?? ""), completed: nil)
+            cell.lblProductCategoryName.text = categoryList[indexPath.row].name
 
             return cell
 

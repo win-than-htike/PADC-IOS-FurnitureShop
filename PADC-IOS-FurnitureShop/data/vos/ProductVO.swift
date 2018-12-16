@@ -11,11 +11,13 @@ import SwiftyJSON
 
 struct ProductVO {
     
-    var id : String? = nil
+    var id : Int? = nil
     
     var name : String? = nil
     
     var images : [String] = []
+    
+    var imagesJson : [String: Any] = [:]
     
     var description : String? = nil
     
@@ -40,16 +42,22 @@ struct ProductVO {
         return value
     }
     
-    public static func parseToProductVO(json : [String : Any]) -> ProductVO {
+    public static func parseToProductVO(json : [String: AnyObject]) -> ProductVO {
         
         var product = ProductVO()
-        product.id = json["id"] as? String
+        product.id = json["id"] as? Int
         product.name = json["name"] as? String
-        product.images = json["image"] as! [String]
+        product.imagesJson = json["image"] as? [String: Any] ?? [:]
         product.description = json["description"] as? String
         product.price = json["price"] as? String
         product.size = json["size"] as? String
         product.status = json["status"] as? String
+        
+        product.images.removeAll()
+        for (image) in product.imagesJson {
+            product.images.append(image.value as? String ?? "")
+        }
+        
         return product
     }
 }

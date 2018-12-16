@@ -12,7 +12,11 @@ import FirebaseAuth
 
 class DataModel {
     
-    private init() {}
+    let rootRef : DatabaseReference!
+    
+    private init() {
+        rootRef = Database.database().reference()
+    }
     
     static var shared : DataModel =  {
         return sharedDataModel
@@ -67,10 +71,55 @@ class DataModel {
     
     func getCategoryList(success : @escaping ([CategoryVO]) -> Void, failure : @escaping (String) -> Void) {
         
-        NetworkManager.shared.loadCategoryList(success: { (data) in
-            success(data)
-        }) { (error) in
-            failure(error)
+        rootRef.child("categories").observe(.value) { (dataSnapshot) in
+            
+            if let data = dataSnapshot.children.allObjects as? [DataSnapshot] {
+                
+                var categoryList: [CategoryVO] = []
+                
+                for category in data {
+                    
+                    if let value = category.value as? [String : AnyObject] {
+                        
+                        var categoryItem = CategoryVO()
+                        categoryItem.id = value["id"] as? Int
+                        categoryItem.name = value["name"] as? String
+                        categoryItem.image = value["image"] as? String
+                        
+                        self.rootRef.child("categories").child(category.key).child("products").observe(.value) { (result) in
+                            
+                            if let products = result.children.allObjects as? [DataSnapshot] {
+                                
+                                for product in products
+                                {
+                                    if let p = product.value as? [String : AnyObject] {
+                                        
+                                        var productItem = ProductVO()
+                                        productItem.id = p["id"] as? Int ?? 0
+                                        productItem.name = p["name"] as? String ?? ""
+                                        productItem.description = p["description"] as? String ?? ""
+                                        productItem.price = p["price"] as? String ?? ""
+                                        productItem.size = p["size"] as? String ?? ""
+                                        productItem.status = p["status"] as? String ?? ""
+                                        productItem.images = p["image"] as? [String] ?? []
+                                        
+                                        categoryItem.productsList.append(productItem)
+                                    }
+                                }
+                            } else {
+                                print("Damn it!")
+                            }
+                            
+                            categoryList.append(categoryItem)
+                            success(categoryList)
+                        }
+                    }
+                }
+                
+                
+            } else {
+                failure("Can't Load Data")
+            }
         }
     }
     

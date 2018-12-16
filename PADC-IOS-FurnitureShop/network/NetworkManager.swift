@@ -139,12 +139,13 @@ class NetworkManager {
                 for category in data {
                     
                     if let value = category.value as? [String : AnyObject] {
-                        
                         categoryList.append(CategoryVO.parseToCategoryVO(json: value))
                     }
                 }
                 
                 success(categoryList)
+            } else {
+                failure("Can't Load Data")
             }
         }
     }
