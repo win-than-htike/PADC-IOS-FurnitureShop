@@ -7,16 +7,21 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imvProfile: UIImageView!
+    @IBOutlet weak var lblUsername: UILabel!
     @IBOutlet weak var cvOrders: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         ImageRoundUtil.round(image: imvProfile)
+
+        let user = DataModel.shared.user
+        lblUsername.text = user?.username
+        imvProfile.sd_setImage(with: URL(string: user?.image ?? ""), completed: nil)
     }
 
     @IBAction func onClickEditProfile(_ sender: Any) {
@@ -53,4 +58,7 @@ class ProfileViewController: UIViewController {
         //TODO Clear Storage or Cache and logout
     }
 
+    @IBAction func editProfileImage(_ sender: Any) {
+        self.chooseUpload(sender as! UIButton, imagePickerControllerDelegate: self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+    }
 }

@@ -20,6 +20,6 @@ pod 'Firebase/Messaging'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'FBSDKLoginKit'
-pod 'FSPagerView'
-
+pod 'moa', '~> 10.0'
+pod 'Auk', '~> 9.0'
 end

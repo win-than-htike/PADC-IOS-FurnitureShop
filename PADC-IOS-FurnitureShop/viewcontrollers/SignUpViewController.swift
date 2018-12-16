@@ -18,6 +18,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var tfRetypePassword: ShadowTextField!
     @IBOutlet weak var btnSingUp: ButtonWithCorner!
 
+    let user = UserVO()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +46,6 @@ class SignUpViewController: UIViewController {
 
             showLoadingIndicator()
 
-            let user = UserVO()
             user.username = tfFullName.text!
             user.email = tfEmail.text!
             user.password = tfPassword.text!
@@ -59,7 +60,7 @@ class SignUpViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }))
                 self.present(alert, animated: true, completion: nil)
-                
+
             }) { (error) in
                 print(error)
             }
@@ -69,4 +70,30 @@ class SignUpViewController: UIViewController {
             showAlertDialog(message: "Password not match!")
         }
     }
+
+    @IBAction func uploadProfileImage(_ sender: UIButton) {
+        self.chooseUpload(sender, imagePickerControllerDelegate: self)
+    }
+}
+
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+
+        self.dismiss(animated: true, completion: nil)
+
+        if let pickedImage = info[.editedImage] as? UIImage {
+
+            DataModel.shared.uploadImage(data: pickedImage.pngData(), success: { (url) in
+
+                self.imvProfilePhoto.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "ic_profile_placeholder"))
+                self.user.image = url
+            }) {
+                self.showAlertDialog(message: "Error.")
+            }
+
+        }
+
+    }
+
 }

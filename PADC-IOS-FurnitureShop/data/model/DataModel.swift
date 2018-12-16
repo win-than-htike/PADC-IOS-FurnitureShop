@@ -123,4 +123,13 @@ class DataModel {
         }
     }
     
+    func uploadImage(data : Data?, success : @escaping (String) -> Void, failure : @escaping () -> Void) {
+        
+        NetworkManager.shared.imageUpload(data: data, success: { (url) in
+            success(url)
+        }) {
+            failure()
+        }
+        
+    }
 }

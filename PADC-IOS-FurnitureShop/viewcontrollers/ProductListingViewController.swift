@@ -14,6 +14,8 @@ class ProductListingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Dummy Category"
 
         self.cvProductListing.delegate = self
         self.cvProductListing.dataSource = self
