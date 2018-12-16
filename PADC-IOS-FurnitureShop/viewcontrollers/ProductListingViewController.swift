@@ -11,10 +11,10 @@ import UIKit
 class ProductListingViewController: UIViewController {
 
     @IBOutlet weak var cvProductListing: UICollectionView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.title = "Dummy Category"
 
         self.cvProductListing.delegate = self
@@ -56,8 +56,8 @@ extension ProductListingViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let width = collectionView.frame.width / 2 - 6
-        let height = (collectionView.frame.width / 3) * 2
-        return CGSize(width: width, height: height)
+       //let height = (collectionView.frame.width / 3) * 2
+        return CGSize(width: width, height: 300)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
