@@ -71,14 +71,18 @@ extension PopularProductCollectionViewCell: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 2)
+        return CGSize(width: UIScreen.main.bounds.width / 3, height: 300)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        if(indexPath.row == 0) {
-            //Do Nothing
-        }
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyBoard.instantiateViewController(withIdentifier: "ProductDetailViewController") as! UINavigationController
+
+        //let vc = navigationController.topViewController as! ProductDetailViewController
+
+
+        self.window?.rootViewController?.present(navigationController, animated: true, completion: nil)
     }
 }
 
