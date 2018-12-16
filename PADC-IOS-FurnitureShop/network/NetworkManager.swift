@@ -105,7 +105,7 @@ class NetworkManager {
         
     }
     
-    func getStoreList(success : @escaping ([StoreVO]) -> Void, failure : @escaping (String) -> Void) {
+    func loadStoreList(success : @escaping ([StoreVO]) -> Void, failure : @escaping (String) -> Void) {
         
         rootRef.child("stores").observe(.value) { (dataSnapshot) in
             
@@ -122,6 +122,29 @@ class NetworkManager {
                 }
                 
                 success(storeList)
+            } else {
+                failure("Can't Load data")
+            }
+        }
+    }
+    
+    func loadCategoryList(success : @escaping ([CategoryVO]) -> Void, failure : @escaping (String) -> Void) {
+        
+        rootRef.child("categories").observe(.value) { (dataSnapshot) in
+            
+            if let data = dataSnapshot.children.allObjects as? [DataSnapshot] {
+                
+                var categoryList: [CategoryVO] = []
+                
+                for category in data {
+                    
+                    if let value = category.value as? [String : AnyObject] {
+                        
+                        categoryList.append(CategoryVO.parseToCategoryVO(json: value))
+                    }
+                }
+                
+                success(categoryList)
             }
         }
     }
