@@ -32,17 +32,17 @@ class HomeViewController: UIViewController {
 
         self.cellsRegister()
     }
-    
+
     func loadCategory() {
-        
+
         self.showLoadingIndicator()
         DataModel.shared.getCategoryList(success: { (data) in
-            
+
             self.categoryList.removeAll()
             self.categoryList = data
             self.cvProductListing.reloadData()
             self.hideLoadingIndicator()
-            
+
         }) { (error) in
             self.hideLoadingIndicator()
             self.showAlertDialog(message: error)
