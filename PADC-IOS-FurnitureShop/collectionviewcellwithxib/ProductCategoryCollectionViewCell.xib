@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,69 +12,56 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCategoryCollectionViewCell" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="396" height="256"/>
+            <rect key="frame" x="0.0" y="0.0" width="341" height="159"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="396" height="256"/>
+                <rect key="frame" x="0.0" y="0.0" width="341" height="159"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeH-xl-sXe">
-                        <rect key="frame" x="0.0" y="0.0" width="396" height="256"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEA-oQ-agb" customClass="CardView" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target">
+                        <rect key="frame" x="1" y="1" width="339" height="157"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gt-0Q-y4W">
-                                <rect key="frame" x="8" y="0.0" width="380" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r4s-44-BeN">
+                                <rect key="frame" x="0.0" y="0.0" width="339" height="157"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8r-kd-emq">
-                                        <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View more &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TP-Dp-yJA">
-                                        <rect key="frame" x="287" y="0.0" width="93" height="50"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy_product_catrgory" translatesAutoresizingMaskIntoConstraints="NO" id="7T6-pB-Qev">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="157"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catrgory Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea4-L6-5YR">
+                                        <rect key="frame" x="173.5" y="0.0" width="165.5" height="157"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1Mc-W2-WIq"/>
-                                </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nIS-X0-LaI">
-                                <rect key="frame" x="0.0" y="50" width="396" height="206"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S9e-aw-pDX">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0Gt-0Q-y4W" firstAttribute="top" secondItem="eeH-xl-sXe" secondAttribute="top" id="Irv-3s-mIA"/>
-                            <constraint firstAttribute="trailing" secondItem="0Gt-0Q-y4W" secondAttribute="trailing" constant="8" id="N63-Lx-8J5"/>
-                            <constraint firstItem="nIS-X0-LaI" firstAttribute="top" secondItem="0Gt-0Q-y4W" secondAttribute="bottom" id="Nmk-tv-gCs"/>
-                            <constraint firstItem="nIS-X0-LaI" firstAttribute="leading" secondItem="eeH-xl-sXe" secondAttribute="leading" id="PdN-Oo-Yq7"/>
-                            <constraint firstAttribute="bottom" secondItem="nIS-X0-LaI" secondAttribute="bottom" id="Txo-6E-VAi"/>
-                            <constraint firstItem="0Gt-0Q-y4W" firstAttribute="leading" secondItem="eeH-xl-sXe" secondAttribute="leading" constant="8" id="VVg-Dh-kJJ"/>
-                            <constraint firstItem="0Gt-0Q-y4W" firstAttribute="centerX" secondItem="eeH-xl-sXe" secondAttribute="centerX" id="q6M-oA-fas"/>
-                            <constraint firstAttribute="trailing" secondItem="nIS-X0-LaI" secondAttribute="trailing" id="thO-El-Srf"/>
+                            <constraint firstAttribute="trailing" secondItem="r4s-44-BeN" secondAttribute="trailing" id="0tQ-oz-45P"/>
+                            <constraint firstItem="r4s-44-BeN" firstAttribute="top" secondItem="YEA-oQ-agb" secondAttribute="top" id="EzR-WT-iFl"/>
+                            <constraint firstAttribute="bottom" secondItem="r4s-44-BeN" secondAttribute="bottom" id="OF9-4S-Tx5"/>
+                            <constraint firstItem="r4s-44-BeN" firstAttribute="leading" secondItem="YEA-oQ-agb" secondAttribute="leading" id="hBa-LT-NhF"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="eeH-xl-sXe" secondAttribute="bottom" id="7Vs-Qr-M84"/>
-                <constraint firstItem="eeH-xl-sXe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FVW-QI-hJv"/>
-                <constraint firstAttribute="trailing" secondItem="eeH-xl-sXe" secondAttribute="trailing" id="UNi-5V-UIH"/>
-                <constraint firstItem="eeH-xl-sXe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="e5J-ap-MEJ"/>
+                <constraint firstAttribute="bottom" secondItem="YEA-oQ-agb" secondAttribute="bottom" constant="1" id="907-9z-oKd"/>
+                <constraint firstItem="YEA-oQ-agb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="1" id="Aag-ql-nAB"/>
+                <constraint firstAttribute="trailing" secondItem="YEA-oQ-agb" secondAttribute="trailing" constant="1" id="XMa-iG-eX2"/>
+                <constraint firstItem="YEA-oQ-agb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="mS9-LZ-d09"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="396" height="256"/>
-            <point key="canvasLocation" x="-67.200000000000003" y="148.42578710644679"/>
+            <size key="customSize" width="341" height="159"/>
+            <connections>
+                <outlet property="imvProductCategory" destination="7T6-pB-Qev" id="Gc5-cL-wc6"/>
+                <outlet property="lblProductCategoryName" destination="ea4-L6-5YR" id="bDy-qf-ZXF"/>
+            </connections>
+            <point key="canvasLocation" x="-544.79999999999995" y="210.04497751124438"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="dummy_product_catrgory" width="968" height="681"/>
+    </resources>
 </document>

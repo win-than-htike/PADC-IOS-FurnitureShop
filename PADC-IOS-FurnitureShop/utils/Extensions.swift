@@ -33,7 +33,7 @@ extension UIViewController {
             () -> Void in
         }
     }
-    
+
     public func showLoadingIndicator(message: String = "Loading") {
         let progressView = MBProgressHUD.showAdded(to: self.view, animated: true)
         progressView.mode = MBProgressHUDMode.indeterminate
