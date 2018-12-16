@@ -12,62 +12,57 @@ class ProductListingViewController: UIViewController {
 
     @IBOutlet weak var cvProductListing: UICollectionView!
 
+    var category: CategoryVO? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Dummy Category"
-
-        var category: CategoryVO? = nil
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-
-            self.title = category?.name
-            self.cvProductListing.delegate = self
-            self.cvProductListing.dataSource = self
-            self.cellRegister()
-        }
-
-        private func cellRegister() {
-            CellRegisterUtil.cellRegister(nibName: "ProductCollectionViewCell",
-                                          collectionView: self.cvProductListing)
-        }
-        @IBAction func onGoBack(_ sender: Any) {
-            self.dismiss(animated: true, completion: nil)
-        }
+        self.title = category?.name
+        self.cvProductListing.delegate = self
+        self.cvProductListing.dataSource = self
+        self.cellRegister()
     }
 
-    extension ProductListingViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    private func cellRegister() {
+        CellRegisterUtil.cellRegister(nibName: "ProductCollectionViewCell",
+                                      collectionView: self.cvProductListing)
+    }
+    @IBAction func onGoBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
 
-        func numberOfSections(in collectionView: UICollectionView) -> Int {
-            return 1
-        }
+extension ProductListingViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return category?.productsList.count ?? 0
-        }
-
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-            cell.bindData(data: category?.productsList[indexPath.row] ?? ProductVO())
-            return cell
-        }
-
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
 
-    extension ProductListingViewController: UICollectionViewDelegate {
-
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-            let width = collectionView.frame.width / 2 - 6
-            //let height = (collectionView.frame.width / 3) * 2
-            return CGSize(width: width, height: 300)
-        }
-
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-            let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! UINavigationController
-            self.present(navigationController, animated: true, completion: nil)
-        }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return category?.productsList.count ?? 0
     }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
+        cell.bindData(data: category?.productsList[indexPath.row] ?? ProductVO())
+        return cell
+    }
+
+}
+
+extension ProductListingViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let width = collectionView.frame.width / 2 - 6
+        //let height = (collectionView.frame.width / 3) * 2
+        return CGSize(width: width, height: 300)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! UINavigationController
+        self.present(navigationController, animated: true, completion: nil)
+    }
+}
