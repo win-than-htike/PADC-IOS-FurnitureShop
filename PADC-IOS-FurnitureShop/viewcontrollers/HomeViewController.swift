@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
     
     func loadCategory() {
         
-        showLoadingIndicator()
+        self.showLoadingIndicator()
         DataModel.shared.getCategoryList(success: { (data) in
             
             self.categoryList.removeAll()
