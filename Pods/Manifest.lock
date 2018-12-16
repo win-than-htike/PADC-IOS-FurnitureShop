@@ -63,6 +63,7 @@ PODS:
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.1)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FSPagerView (0.8.1)
   - GoogleAppMeasurement (5.3.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -130,6 +131,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - FSPagerView
   - GoogleSignIn
   - MBProgressHUD (~> 1.1.0)
   - SDWebImage (~> 4.0)
@@ -153,6 +155,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseMessaging
     - FirebaseStorage
+    - FSPagerView
     - GoogleAppMeasurement
     - GoogleSignIn
     - GoogleToolboxForMac
@@ -183,6 +186,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
   FirebaseMessaging: 0f14a264b0d7f867e8eff5d3556bc5d0d4e57888
   FirebaseStorage: 3d22c041370593e639fba013d1eb698a8dae2881
+  FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
   GoogleAppMeasurement: 5029d78f2b438bd30ffb44e6c558b57c21622727
   GoogleSignIn: 11183592dc63e105475c7305a325045ff95e02b7
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
@@ -198,6 +202,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
 
-PODFILE CHECKSUM: b6673a837baf28409fedefb53aae59a8b31ece91
+PODFILE CHECKSUM: 7ac1176f7ad71095789e2c4a82b21dbfb0e53280
 
 COCOAPODS: 1.5.3

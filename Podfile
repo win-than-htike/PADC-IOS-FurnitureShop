@@ -20,5 +20,6 @@ pod 'Firebase/Messaging'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'FBSDKLoginKit'
+pod 'FSPagerView'
 
 end
