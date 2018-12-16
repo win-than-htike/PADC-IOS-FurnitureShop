@@ -32,7 +32,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         lblStatus.text = data.status
         lblName.text = data.name
         lblDescription.text = data.description
-        lblPrice.text = "\(String(describing: data.price))$"
+        lblPrice.text = "\(data.price ?? "-")$"
         lblDiscount.text = "10%"
         lblManufacture.text = "Sweety Home"
     }

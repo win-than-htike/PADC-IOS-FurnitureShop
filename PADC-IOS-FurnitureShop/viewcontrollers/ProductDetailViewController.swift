@@ -22,13 +22,17 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var lblCategoryName: UILabel!
     @IBOutlet weak var lblColors: UILabel!
     @IBOutlet weak var lblOrderCount: UILabel!
+    
+    var product: ProductVO? = nil
 
     private var orderCount: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Dummy Product"
+        self.title = "Detail"
+        
+        bindData()
 
         self.showProductImages()
 
@@ -39,6 +43,13 @@ class ProductDetailViewController: UIViewController {
 
         lblDiscount.attributedText = attributeString
 
+    }
+    
+    func bindData() {
+        self.lblName.text = product?.name
+        self.lblSize.text = product?.size
+        self.lblDescription.text = product?.description
+        
     }
 
     private func showProductImages() {

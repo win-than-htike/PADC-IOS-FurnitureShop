@@ -63,6 +63,8 @@ extension ProductListingViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! UINavigationController
+        let vc = navigationController.viewControllers[0] as! ProductDetailViewController
+        vc.product = category?.productsList[indexPath.row]
         self.present(navigationController, animated: true, completion: nil)
     }
 }
