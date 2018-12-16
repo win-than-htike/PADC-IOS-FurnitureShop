@@ -297,7 +297,7 @@
                         <viewLayoutGuide key="safeArea" id="KuH-EU-fTZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign up" id="VzW-l9-8vt">
-                        <barButtonItem key="leftBarButtonItem" title="Back" image="ic_back" style="plain" id="pT2-OZ-saZ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="pT2-OZ-saZ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="goBack:" destination="Yam-s4-qBY" id="yZg-BC-ZOE"/>
@@ -602,7 +602,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-qn-y16">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDl-OY-DIh" customClass="UIScrollView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
@@ -715,7 +715,7 @@
                                 </constraints>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="eKa-R9-gd8">
-                                <rect key="frame" x="8" y="767" width="398" height="42"/>
+                                <rect key="frame" x="8" y="816" width="398" height="42"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wvs-o4-N6p">
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="42"/>
@@ -786,7 +786,7 @@
                         <viewLayoutGuide key="safeArea" id="Twb-wv-I8U"/>
                     </view>
                     <navigationItem key="navigationItem" id="E8y-BD-tLW">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="mwT-Hb-Sot">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="mwT-Hb-Sot">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onClickGoBack:" destination="kuO-VU-ykQ" id="Gzp-I7-GtA"/>
@@ -828,7 +828,7 @@
                         <viewLayoutGuide key="safeArea" id="xSO-oe-zPF"/>
                     </view>
                     <navigationItem key="navigationItem" id="emp-NW-iku">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="6Yj-EY-USy">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6Yj-EY-USy">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
@@ -991,7 +991,7 @@
                         <viewLayoutGuide key="safeArea" id="pK6-rH-k9v"/>
                     </view>
                     <navigationItem key="navigationItem" id="vLT-4I-Ooi">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_back" id="rB7-cv-Me0">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="rB7-cv-Me0">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onGoBack:" destination="eBA-AT-h98" id="X4Q-LZ-0Cp"/>
@@ -1064,7 +1064,6 @@
     </scenes>
     <resources>
         <image name="bg_entry" width="2956" height="5746"/>
-        <image name="ic_back" width="32" height="32"/>
         <image name="ic_bookmark" width="26" height="26"/>
         <image name="ic_home" width="26" height="26"/>
         <image name="ic_like" width="32" height="32"/>
@@ -1077,7 +1076,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="rid-FB-odj"/>
         <segue reference="RAS-zB-UMk"/>
-        <segue reference="rHg-gL-GXx"/>
+        <segue reference="UHO-GM-CIG"/>
         <segue reference="5l9-mD-zL1"/>
     </inferredMetricsTieBreakers>
 </document>

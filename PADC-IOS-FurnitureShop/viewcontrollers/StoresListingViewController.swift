@@ -32,17 +32,6 @@ class StoresListingViewController: UIViewController {
                                       collectionView: self.cvStoresListing)
     }
 
-    private func stetDummyData() {
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-        //        storesListing.append((storeImage: "dummy_store.png", name: "Store 1", address: "Pazadaung", phoneNumber: "09 1247989241"))
-    }
-
     func getStoreList() {
 
         showLoadingIndicator()
