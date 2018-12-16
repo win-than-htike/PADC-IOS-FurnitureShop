@@ -54,9 +54,9 @@ class DataModel {
         }
     }
     
-    func getStores(success : @escaping ([StoreVO]) -> Void, failure : @escaping (String) -> Void) {
+    func getStoresList(success : @escaping ([StoreVO]) -> Void, failure : @escaping (String) -> Void) {
         
-        NetworkManager.shared.getStoreList(success: { (data) in
+        NetworkManager.shared.loadStoreList(success: { (data) in
             
             success(data)
             
@@ -64,4 +64,14 @@ class DataModel {
             failure(error)
         }
     }
+    
+    func getCategoryList(success : @escaping ([CategoryVO]) -> Void, failure : @escaping (String) -> Void) {
+        
+        NetworkManager.shared.loadCategoryList(success: { (data) in
+            success(data)
+        }) { (error) in
+            failure(error)
+        }
+    }
+    
 }

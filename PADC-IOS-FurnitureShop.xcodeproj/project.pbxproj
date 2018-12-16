@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1167699E21C5FC8C00F498FA /* StoreVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167699D21C5FC8C00F498FA /* StoreVO.swift */; };
 		116769A021C60B3A00F498FA /* StoresListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167699F21C60B3A00F498FA /* StoresListingViewController.swift */; };
+		116769A221C62D0100F498FA /* CategoryVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116769A121C62D0100F498FA /* CategoryVO.swift */; };
+		116769A421C632F200F498FA /* ProductVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116769A321C632F200F498FA /* ProductVO.swift */; };
 		116E796621C4E53B008D0958 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796521C4E53B008D0958 /* UserVO.swift */; };
 		116E796921C4E5A1008D0958 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796821C4E5A1008D0958 /* DataModel.swift */; };
 		116E796C21C4E69B008D0958 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E796B21C4E69B008D0958 /* NetworkManager.swift */; };
@@ -46,6 +48,8 @@
 		069F19560D9A16490F05AA9A /* Pods-PADC-IOS-FurnitureShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PADC-IOS-FurnitureShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-PADC-IOS-FurnitureShop/Pods-PADC-IOS-FurnitureShop.release.xcconfig"; sourceTree = "<group>"; };
 		1167699D21C5FC8C00F498FA /* StoreVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVO.swift; sourceTree = "<group>"; };
 		1167699F21C60B3A00F498FA /* StoresListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresListingViewController.swift; sourceTree = "<group>"; };
+		116769A121C62D0100F498FA /* CategoryVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVO.swift; sourceTree = "<group>"; };
+		116769A321C632F200F498FA /* ProductVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVO.swift; sourceTree = "<group>"; };
 		116E796521C4E53B008D0958 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
 		116E796821C4E5A1008D0958 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		116E796B21C4E69B008D0958 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				116E796521C4E53B008D0958 /* UserVO.swift */,
 				1167699D21C5FC8C00F498FA /* StoreVO.swift */,
+				116769A121C62D0100F498FA /* CategoryVO.swift */,
+				116769A321C632F200F498FA /* ProductVO.swift */,
 			);
 			path = vos;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116769A421C632F200F498FA /* ProductVO.swift in Sources */,
 				6D031CF921C4DF70008CF461 /* BookmarksViewController.swift in Sources */,
 				6D1F853421C49FE40053AF8D /* ImageRoundUtil.swift in Sources */,
 				1167699E21C5FC8C00F498FA /* StoreVO.swift in Sources */,
@@ -446,6 +453,7 @@
 				116E796C21C4E69B008D0958 /* NetworkManager.swift in Sources */,
 				6D556DA521C4F00B00145AF4 /* ProductDetailViewController.swift in Sources */,
 				6D1F852E21C494A00053AF8D /* ShadowTextField.swift in Sources */,
+				116769A221C62D0100F498FA /* CategoryVO.swift in Sources */,
 				6D031CF521C4DF3F008CF461 /* ProfileViewController.swift in Sources */,
 				6D556DB521C51BF200145AF4 /* ProductCollectionViewCell.swift in Sources */,
 				6D0F778621C5965F00438F54 /* CardView.swift in Sources */,

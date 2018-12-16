@@ -47,7 +47,7 @@ class StoresListingViewController: UIViewController {
         
         showLoadingIndicator()
         
-        DataModel.shared.getStores(success: { (data) in
+        DataModel.shared.getStoresList(success: { (data) in
             
             self.storesListing.removeAll()
             

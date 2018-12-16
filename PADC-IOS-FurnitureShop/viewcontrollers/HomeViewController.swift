@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController {
 
@@ -18,14 +19,14 @@ class HomeViewController: UIViewController {
                            status: String,
                            image: String)] = []
 
-    var productCategory: [(name: String,
-                           image: String)] = []
+    var productCategory: [CategoryVO] = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setDummyData()
+//        self.setDummyData()
+        loadCategory()
 
         self.cvProductListing.dataSource = self
         self.cvProductListing.delegate = self
@@ -35,15 +36,33 @@ class HomeViewController: UIViewController {
 
     private func setDummyData() {
 
-        productCategory.append((name: "Furniture", image: "dummy_product_catrgory.png"))
-        productCategory.append((name: "Office", image: "dummy_product_catrgory.png"))
-        productCategory.append((name: "Outdoor", image: "dummy_product_catrgory.png"))
-        productCategory.append((name: "Living Room", image: "dummy_product_catrgory.png"))
-        productCategory.append((name: "Kitchen", image: "dummy_product_catrgory.png"))
-        productCategory.append((name: "Bed Room", image: "dummy_product_catrgory.png"))
-        productCategory.append((name: "Baby Room", image: "dummy_product_catrgory.png"))
-        productCategory.append((name: "Dinning Room", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Furniture", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Office", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Outdoor", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Living Room", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Kitchen", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Bed Room", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Baby Room", image: "dummy_product_catrgory.png"))
+//        productCategory.append((name: "Dinning Room", image: "dummy_product_catrgory.png"))
 
+    }
+    
+    func loadCategory() {
+        
+        showLoadingIndicator()
+        DataModel.shared.getCategoryList(success: { (data) in
+            
+            self.productCategory.removeAll()
+            for category in data {
+                self.productCategory.append(category)
+            }
+            self.cvProductListing.reloadData()
+            self.hideLoadingIndicator()
+            
+        }) { (error) in
+            self.hideLoadingIndicator()
+            self.showAlertDialog(message: error)
+        }
     }
 
     private func cellsRegister() {
@@ -79,7 +98,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCategoryCollectionViewCell", for: indexPath) as! ProductCategoryCollectionViewCell
 
-            cell.imvProductCategory.image = UIImage(named: productCategory[indexPath.row].image)
+            cell.imvProductCategory?.sd_setImage(with: URL(string: productCategory[indexPath.row].image ?? ""), completed: nil)
             cell.lblProductCategoryName.text = productCategory[indexPath.row].name
 
             return cell
