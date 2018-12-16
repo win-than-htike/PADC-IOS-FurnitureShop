@@ -32,7 +32,8 @@ class UserVO: NSObject {
             "email" : user.email ?? "",
             "phone" : user.phone ?? "",
             "password" : user.password ?? "",
-            "confirmPassword" : user.confirmPassword ?? ""
+            "confirmPassword" : user.confirmPassword ?? "",
+            "image" : user.image ?? ""
         ]
         
         return value
@@ -47,6 +48,7 @@ class UserVO: NSObject {
         user.phone = json["phone"] as? String
         user.email = json["email"] as? String
         user.password = json["password"] as? String
+        user.image = json["image"] as? String
         return user
         
     }

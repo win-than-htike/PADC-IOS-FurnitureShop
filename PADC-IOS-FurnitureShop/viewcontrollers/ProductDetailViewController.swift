@@ -27,6 +27,8 @@ class ProductDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Dummy Product"
 
         self.showProductImages()
 

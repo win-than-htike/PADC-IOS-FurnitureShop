@@ -176,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="270" y="27"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Sign up-->
         <scene sceneID="JSg-9l-gG9">
             <objects>
                 <viewController id="Yam-s4-qBY" customClass="SignUpViewController" customModule="PADC_IOS_FurnitureShop" customModuleProvider="target" sceneMemberID="viewController">
@@ -204,6 +204,9 @@
                                         <state key="normal" title="Upload">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="uploadProfileImage:" destination="Yam-s4-qBY" eventType="touchUpInside" id="MSg-cl-qzG"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1L9-G6-fVj">
                                         <rect key="frame" x="16" y="250" width="382" height="216"/>
@@ -293,7 +296,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KuH-EU-fTZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VzW-l9-8vt">
+                    <navigationItem key="navigationItem" title="Sign up" id="VzW-l9-8vt">
                         <barButtonItem key="leftBarButtonItem" title="Back" image="ic_back" style="plain" id="pT2-OZ-saZ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -344,23 +347,30 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="editProfileImage:" destination="nTF-ls-b8f" eventType="touchUpInside" id="Wde-Fq-q4x"/>
                                             <action selector="onClickEditProfile:" destination="nTF-ls-b8f" eventType="touchUpInside" id="Tf8-ia-dtb"/>
                                         </connections>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XVT-MQ-o6W">
-                                        <rect key="frame" x="8" y="211" width="398" height="514"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wai Yan Phyoe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNE-J2-MvO">
+                                        <rect key="frame" x="8" y="219" width="398" height="23.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e7X-7V-Emo">
+                                        <rect key="frame" x="8" y="250.66666666666669" width="398" height="464.00000000000006"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="514" id="TmE-pt-9fD"/>
+                                            <constraint firstAttribute="height" constant="464" id="czr-ZI-mWI"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p8S-Iy-xGO">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M1o-8s-5n8">
                                             <size key="itemSize" width="50" height="50"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qyp-g9-FcW">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wZR-Ey-JeR">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -373,14 +383,18 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="J9T-gw-9wF" firstAttribute="top" secondItem="beZ-4m-AxJ" secondAttribute="bottom" constant="8" symbolic="YES" id="11n-t0-Xbv"/>
-                                    <constraint firstAttribute="bottom" secondItem="XVT-MQ-o6W" secondAttribute="bottom" constant="8" id="5PY-ay-aik"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNE-J2-MvO" secondAttribute="trailing" constant="8" id="1PE-wh-uv3"/>
+                                    <constraint firstAttribute="trailing" secondItem="e7X-7V-Emo" secondAttribute="trailing" constant="8" id="3ai-KM-8iM"/>
+                                    <constraint firstAttribute="bottom" secondItem="e7X-7V-Emo" secondAttribute="bottom" id="7oa-9z-Hsn"/>
                                     <constraint firstItem="J9T-gw-9wF" firstAttribute="centerX" secondItem="QiO-16-ivk" secondAttribute="centerX" id="9qq-js-ruM"/>
-                                    <constraint firstAttribute="trailing" secondItem="XVT-MQ-o6W" secondAttribute="trailing" constant="8" id="SaX-PP-3QJ"/>
-                                    <constraint firstItem="XVT-MQ-o6W" firstAttribute="top" secondItem="J9T-gw-9wF" secondAttribute="bottom" constant="8" id="XyT-hy-ZlY"/>
-                                    <constraint firstItem="XVT-MQ-o6W" firstAttribute="leading" secondItem="QiO-16-ivk" secondAttribute="leading" constant="8" id="cUi-mT-sHH"/>
-                                    <constraint firstItem="XVT-MQ-o6W" firstAttribute="centerX" secondItem="QiO-16-ivk" secondAttribute="centerX" id="jqe-Z7-6fI"/>
+                                    <constraint firstItem="rNE-J2-MvO" firstAttribute="centerX" secondItem="QiO-16-ivk" secondAttribute="centerX" id="HfV-t0-G0u"/>
+                                    <constraint firstItem="rNE-J2-MvO" firstAttribute="top" secondItem="J9T-gw-9wF" secondAttribute="bottom" constant="16" id="Rrt-7L-Wau"/>
+                                    <constraint firstItem="e7X-7V-Emo" firstAttribute="leading" secondItem="QiO-16-ivk" secondAttribute="leading" constant="8" id="TLV-Xc-5fS"/>
+                                    <constraint firstItem="rNE-J2-MvO" firstAttribute="leading" secondItem="QiO-16-ivk" secondAttribute="leading" constant="8" id="cle-nZ-93I"/>
+                                    <constraint firstItem="e7X-7V-Emo" firstAttribute="centerX" secondItem="QiO-16-ivk" secondAttribute="centerX" id="j2j-gv-8Qm"/>
                                     <constraint firstItem="beZ-4m-AxJ" firstAttribute="centerX" secondItem="QiO-16-ivk" secondAttribute="centerX" id="rZi-dA-Nnv"/>
                                     <constraint firstItem="beZ-4m-AxJ" firstAttribute="top" secondItem="QiO-16-ivk" secondAttribute="top" constant="45" id="v89-lO-ToN"/>
+                                    <constraint firstItem="e7X-7V-Emo" firstAttribute="top" secondItem="rNE-J2-MvO" secondAttribute="bottom" constant="8" id="wNg-am-w7Q"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -402,8 +416,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cvOrders" destination="XVT-MQ-o6W" id="d6X-Er-xUW"/>
+                        <outlet property="cvOrders" destination="e7X-7V-Emo" id="otS-8q-P79"/>
                         <outlet property="imvProfile" destination="beZ-4m-AxJ" id="nYO-X0-ast"/>
+                        <outlet property="lblUsername" destination="rNE-J2-MvO" id="pRF-qM-NpY"/>
                         <segue destination="kuO-VU-ykQ" kind="show" id="rHg-gL-GXx"/>
                     </connections>
                 </viewController>
@@ -625,11 +640,12 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="200 $">
                                                         <attributes>
+                                                            <color key="NSColor" red="0.46180996192893398" green="0.46180996192893398" blue="0.46180996192893398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="14" name="Futura-Medium"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
-                                                <nil key="highlightedColor"/>
+                                                <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -1062,6 +1078,6 @@
         <segue reference="rid-FB-odj"/>
         <segue reference="RAS-zB-UMk"/>
         <segue reference="rHg-gL-GXx"/>
-        <segue reference="j7D-OD-KMp"/>
+        <segue reference="5l9-mD-zL1"/>
     </inferredMetricsTieBreakers>
 </document>
