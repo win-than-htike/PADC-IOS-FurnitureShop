@@ -46,6 +46,7 @@ class MainViewController: UIViewController {
     
     func goToHome() {
         let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        self.view.window?.rootViewController = navigationController
         self.present(navigationController, animated: true, completion: nil)
     }
 }
